@@ -39,7 +39,6 @@ public class BasicEvaluation extends Evaluation {
     }
 
     public String getHello() {
-        System.out.println("Hello");
         return hello;
     }
 }
