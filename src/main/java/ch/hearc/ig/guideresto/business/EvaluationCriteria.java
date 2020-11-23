@@ -1,9 +1,16 @@
 package ch.hearc.ig.guideresto.business;
 
+import javax.persistence.*;
+
 public class EvaluationCriteria {
-    
+    @Id()
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="SEQ_CRITERES_EVALUATION")
+    @SequenceGenerator(name="SEQ_CRITERES_EVALUATION", sequenceName="SEQ_CRITERES_EVALUATION")
+    @Column(name="numero")
     private Integer id;
+    @Column(name="nom", nullable = false)
     private String name;
+    @Column(name="description")
     private String description;
 
     public EvaluationCriteria() {

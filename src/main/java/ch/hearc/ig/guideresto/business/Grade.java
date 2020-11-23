@@ -1,10 +1,18 @@
 package ch.hearc.ig.guideresto.business;
 
+import javax.persistence.*;
+
 public class Grade {
-    
+    @Id()
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="SEQ_NOTES")
+    @SequenceGenerator(name="SEQ_NOTES", sequenceName="SEQ_NOTES")
+    @Column(name="numero")
     private Integer id;
+    @Column(name="note", nullable = false)
     private Integer grade;
+    // TODO
     private CompleteEvaluation evaluation;
+    // TODO
     private EvaluationCriteria criteria;
 
     public Grade() {

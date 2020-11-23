@@ -3,9 +3,11 @@ package ch.hearc.ig.guideresto.business;
 import java.util.Date;
 
 public abstract class Evaluation {
-    
+    // TODO
     private Integer id;
+    // TODO
     private Date visitDate;
+    // TODO
     private Restaurant restaurant;
 
     public Evaluation() {

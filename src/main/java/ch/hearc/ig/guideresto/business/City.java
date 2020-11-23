@@ -1,13 +1,22 @@
 package ch.hearc.ig.guideresto.business;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
+@Table(name="VILLES")
 public class City {
-    
+    @Id()
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SEQ_VILLES")
+    @SequenceGenerator(name="SEQ_VILLES", sequenceName="SEQ_VILLES")
+    @Column(name="numero")
     private Integer id;
+    @Column(name="code_postal", nullable = false)
     private String zipCode;
+    @Column(name="nom_ville", nullable = false)
     private String cityName;
+    @OneToMany(mappedBy="nom_de_la_relation_vers_restaurant")
     private Set<Restaurant> restaurants;
 
     public City() {

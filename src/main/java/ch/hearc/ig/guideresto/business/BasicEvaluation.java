@@ -1,11 +1,14 @@
 package ch.hearc.ig.guideresto.business;
 
+import javax.persistence.Column;
 import java.util.Date;
 
 public class BasicEvaluation extends Evaluation {
-    
+    @Column(name="appreciation", nullable = false)
     private boolean likeRestaurant;
+    @Column(name="adresse_ip", nullable = false)
     private String ipAddress;
+    // TODO
     private String hello;
 
     public BasicEvaluation() {

@@ -5,9 +5,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class CompleteEvaluation extends Evaluation {
-    
+    // TODO
     private String comment;
+    // TODO
     private String username;
+    // TODO
     private Set<Grade> grades;
 
     public CompleteEvaluation() {

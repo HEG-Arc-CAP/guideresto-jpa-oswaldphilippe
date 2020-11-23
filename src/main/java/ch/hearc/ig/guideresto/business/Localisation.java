@@ -1,8 +1,9 @@
 package ch.hearc.ig.guideresto.business;
 
 public class Localisation {
-    
+    // TODO
     private String street;
+    // TODO
     private City city;
 
     public Localisation() {

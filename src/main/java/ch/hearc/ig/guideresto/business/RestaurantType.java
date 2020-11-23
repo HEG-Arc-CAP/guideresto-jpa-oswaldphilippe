@@ -1,13 +1,20 @@
 package ch.hearc.ig.guideresto.business;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
 public class RestaurantType {
-    
+    @Id()
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="SEQ_TYPES_GASTRONOMIQUES")
+    @SequenceGenerator(name="SEQ_TYPES_GASTRONOMIQUES", sequenceName="SEQ_TYPES_GASTRONOMIQUES")
+    @Column(name="numero")
     private Integer id;
+    @Column(name="libelle", nullable = false)
     private String label;
+    @Column(name="description") // TODO type CLOB
     private String description;
+    // TODO
     private Set<Restaurant> restaurants;
 
     public RestaurantType() {
